@@ -12,6 +12,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { ERROR_SERVER } = require('./utils/const');
 const NotFoundError = require('./errors/NotFoundError');
 
+const { PORT = 3001, DATABASE = 'mongodb://localhost:27017/moviesdb' } = process.env;
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
