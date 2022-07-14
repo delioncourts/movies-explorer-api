@@ -18,9 +18,9 @@ const { PORT = 3000, DATABASE = 'mongodb://localhost:27017/moviesdb' } = process
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(limiter);
 app.use(helmet());
 app.use(requestLogger); // подключаем логгер запросов
+app.use(limiter);
 app.use(cors());
 
 app.use(routes);

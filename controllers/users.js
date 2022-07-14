@@ -64,7 +64,7 @@ const updateUser = (req, res, next) => {
   )
     .then((user) => res.send(user))
     .catch((err) => {
-      if (err.name === 11000) {
+      if (err.code === 11000) {
         return next(new ConflictError('Данный email уже зарегистрирован'));
       }
       if (err.name === 'ValidationError') {
