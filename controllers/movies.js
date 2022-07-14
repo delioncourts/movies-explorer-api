@@ -50,7 +50,7 @@ const createMovie = (req, res, next) => {
 };
 
 const deleteMovie = (req, res, next) => {
-  Movie.findById(req.params.cardId)
+  Movie.findById(req.params._Id)
     .then((movie) => {
       switch (true) {
         case !movie
