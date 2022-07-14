@@ -13,7 +13,7 @@ const errorHandler = require('./middlewares/errorHandler');
 const routes = require('./routes/index');
 const limiter = require('./utils/rateLimiter');
 
-const { PORT = 3001, DATABASE = 'mongodb://localhost:27017/moviesdb' } = process.env;
+const { PORT = 3000, DATABASE = 'mongodb://localhost:27017/moviesdb' } = process.env;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
