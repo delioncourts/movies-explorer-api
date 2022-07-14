@@ -10,6 +10,6 @@ const { validateCreateMovie, validateDeleteMovie } = require('../utils/validatio
 
 router.get('/movies', getMovies);
 router.post('/movies', validateCreateMovie, createMovie);
-router.delete('movies/:_id', validateDeleteMovie, deleteMovie);
+router.delete('/movies/:_id', validateDeleteMovie, deleteMovie);
 
 module.exports = router;
